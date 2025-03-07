@@ -21,10 +21,10 @@ return new class extends Migration
             $table->text('address');
             $table->string('rt',3);
             $table->string('rw',3);
-            $table->string('religion',20);
+            $table->string('religion',20)->nullable();
             $table->enum('marital_status',['Belum Kawin','Kawin','Cerai Hidup','Cerai Mati']);
             $table->string('work',50);
-            $table->string('phone',15);
+            $table->string('phone',25)->nullable();
             $table->enum('status',['Aktif', 'Tidak Aktif'])->default('Aktif');
             $table->timestamps();
         });
